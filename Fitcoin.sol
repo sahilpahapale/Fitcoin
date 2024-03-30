@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 contract FitCoin {
     string public name = "FitCoin";
     string public symbol = "FIT";
-    uint8 public decimals = 18;
+    uint8 public decimal = 18;
     uint256 public totalSupply;
 
     mapping(address => uint256) public balanceOf;
@@ -15,7 +15,7 @@ contract FitCoin {
     event Burn(address indexed from, uint256 value);
 
     constructor(uint256 initialSupply) {
-        totalSupply = initialSupply * 10 ** uint256(decimals);
+        totalSupply = initialSupply * 10 ** uint256(decimal);
         balanceOf[msg.sender] = totalSupply;
     }
 
